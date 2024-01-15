@@ -33,7 +33,7 @@ sub TIEARRAY {
 sub FETCH {
     my ($self, $index) = @_;
     $self->{_row_as_hashref} ? $self->{_tdobj}->get_row_at_pos_hashref($index) : $self->{_tdobj}->get_item_at_pos($index);
-
+}
 
 sub STORE {
     my ($self, $index, $value) = @_;
