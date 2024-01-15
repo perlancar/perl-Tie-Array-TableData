@@ -16,7 +16,7 @@ sub TIEARRAY {
     my ($tabledata, $row_as_hashref) = @_;
 
     die "Please specify a TableData module to instantiate (string or 2-element array)" unless $tabledata;
-    my $tdobj = Module::Load::Util::instantiate_class_with_optional_args($tabledata);
+    my $tdobj = Module::Load::Util::instantiate_class_with_optional_args({ns_prefix=>"TableData"}, $tabledata);
 
     unless ($tdobj->can("get_item_at_pos")) {
         warn "TableData does not support get_item_at_pos(), applying the inefficient implementation";
