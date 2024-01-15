@@ -90,8 +90,8 @@ sub SPLICE {
 
  use Tie::Array::TableData;
 
-  tie my @ary, 'Tie::Array::TableData', 'Example::DeNiro'   ; # access rows as arrayref
- #tie my @ary, 'Tie::Array::TableData', 'Example::DeNiro', 1; # access rows as hashref
+  tie my @ary, 'Tie::Array::TableData', 'Sample::DeNiro'   ; # access rows as arrayref
+ #tie my @ary, 'Tie::Array::TableData', 'Sample::DeNiro', 1; # access rows as hashref
 
  # get the second row
  my $row = $ary[1];
